@@ -11,13 +11,13 @@ CREATE TABLE inventory(
 );
 
 CREATE TABLE handling(
-    fee int primary key
+    fee float(4,2) primary key
 );
 
 CREATE TABLE weight(
-    minW int primary key,
-    maxW int,
-    cost int
+    minW float(8,2) primary key,
+    maxW float(8,2),
+    cost float(8,2)
 );
 
 CREATE TABLE pInfo(
@@ -38,7 +38,46 @@ CREATE TABLE orderHistory(
     FOREIGN KEY(email) REFERENCES pInfo(email)
 );
 
+INSERT INTO inventory(partNum, quantity)
+    VALUES
+            (1, 20),
+            (2, 50),
+            (3, 12),
+            (4, 89),
+            (5, 97),
+            (6, 3),
+            (7, 100),
+            (8, 9),
+            (9, 67),
+            (10, 89);
 
+INSERT INTO handling(fee)
+    VALUES
+            (10.00),
+            (20.00),
+            (30.00),
+            (40.00),
+            (50.00);
 
+INSERT INTO weight(minW, maxW, cost)
+    VALUES
+            (0.00, 0.55, 0.00),
+            (0.56, 1.00, 1.00),
+            (1.01, 1.55, 2.00),
+            (1.56, 2.00, 3.00),
+            (2.01, 2.55, 4.00),
+            (2.56, 3.00, 5.00),
+            (3.01, 3.55, 6.00),
+            (3.56, 4.00, 7.00),
+            (12.01, 12.55, 14.00),
+            (12.56, 13.00, 15.00),
+            (99.01, 99.55, 100.00),
+            (99.56, 100.00, 110.00);
 
+INSERT INTO pInfo(email,fName,lName,creditCard,addr)
+    VALUES
+            ('arojo@yahoo.com','Alexander', 'Rojas', '123456789123', '550 N Annie Glidden Rd, Dekalb, IL, USA');
 
+INSERT INTO orderHistory(partNum, partDesc, price, email)
+    VALUES
+            (1, 'windshield w/ polymer ',178.76,'arojo@yahoo.com');
