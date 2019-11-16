@@ -54,11 +54,11 @@ INSERT INTO inventory(partNum, quantity)
 
 INSERT INTO handling(fee)
     VALUES
-            (10.00),
-            (20.00),
-            (30.00),
-            (40.00),
-            (50.00);
+            (10.00, 1),
+            (20.00, 2),
+            (30.00, 3),
+            (40.00, 4),
+            (50.00, 5);
 
 INSERT INTO weight(minW, maxW, cost)
     VALUES
