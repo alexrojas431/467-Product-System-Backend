@@ -12,7 +12,7 @@ CREATE TABLE inventory(
 
 CREATE TABLE handling(
     fee float(4,2) primary key,
-    type int
+    feetype int
 );
 
 CREATE TABLE weight(
