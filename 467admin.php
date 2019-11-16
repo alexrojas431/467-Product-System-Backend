@@ -70,16 +70,16 @@ $prepared = $pdo->query('SELECT orderID, inventory.partNum, partDesc, price, pIn
 			<option value="minW">minW</option>
 			<option value="maxW">maxW</option>	
 		</select>
-		<input type "float" name="wValue"/>	
-		<input type "float" name="cost"/>
+		<input type="text" name="wValue"/>	
+		<input type="text" name="cost"/>
 		<input name="bracketchange" type="submit" />	
 		</form>
 </body>
 <body>
 	<h1>Change the handling fee</h1>
 	<form method="POST" action="/~z1853137/changefee.php">		
-		<input type "text" name="fee"/>
-		<input name="submitBtn" type="submit" />	
+		<input type="text" name="fee"/>
+		<input name="feechange" type="submit" />	
 		</form>
 </body>
 <body>
