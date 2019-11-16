@@ -12,7 +12,7 @@ CREATE TABLE inventory(
 
 CREATE TABLE handling(
     fee float(4,2) primary key,
-    type int
+    feetype int
 );
 
 CREATE TABLE weight(
@@ -52,7 +52,7 @@ INSERT INTO inventory(partNum, quantity)
             (9, 67),
             (10, 89);
 
-INSERT INTO handling(fee)
+INSERT INTO handling(fee, feetype)
     VALUES
             (10.00, 1),
             (20.00, 2),
