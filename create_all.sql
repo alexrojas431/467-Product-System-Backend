@@ -35,6 +35,8 @@ CREATE TABLE orderHistory(
     partDesc varchar(50),
     price float(8,2),
     email varchar(50),
+    dateOr DATETIME,
+    status varchar(50),
     FOREIGN KEY(partNum) REFERENCES inventory(partNum),
     FOREIGN KEY(email) REFERENCES pInfo(email)
 );
@@ -81,4 +83,4 @@ INSERT INTO pInfo(email,fName,lName,creditCard,addr)
 
 INSERT INTO orderHistory(partNum, partDesc, price, email)
     VALUES
-            (1, 'windshield w/ polymer ',178.76,'arojo@yahoo.com');
+            (1, 'windshield w/ polymer ',178.76,'arojo@yahoo.com', 1998-03-21-11-12-56, authorized);
