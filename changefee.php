@@ -6,9 +6,9 @@
                 echo "Connection to DB failed: " . $e->getMessage();
 	}
 echo $_POST['fee'];
-$handlingEdit = "UPDATE handling SET fee=? WHERE feetype=1;";
+$handlingEdit = "UPDATE handling SET fee = ? WHERE feetype = ?;";
 $handlingResult = $pdo->prepare($handlingEdit);
-$handlingexec = $handlingResult->execute(array($_POST['fee']));
+$handlingexec = $handlingResult->execute(array($_POST['fee'], 1));
 
-//header("Refresh:0; url=/~z1853137/467admin.php");
+header("Refresh:5; url=/~z1853137/467admin.php");
 ?>
