@@ -32,6 +32,7 @@ CREATE TABLE pInfo(
 CREATE TABLE orderHistory(
     orderID int auto_increment primary key,
     partNum int,
+	oQuantity int,
     partDesc varchar(50),
     price float(8,2),
     email varchar(50),
@@ -79,8 +80,12 @@ INSERT INTO weight(minW, maxW, cost)
 
 INSERT INTO pInfo(email,fName,lName,creditCard,addr)
     VALUES
-            ('arojo@yahoo.com','Alexander', 'Rojas', '123456789123', '550 N Annie Glidden Rd, Dekalb, IL, USA');
+            ('arojo@yahoo.com','Alexander', 'Rojas', '123456789123', '550 N Annie Glidden Rd, Dekalb, IL, USA'),
+			('rdmperson@hotmail.com', 'Brandon', 'Alexander', '829329129329', 'That one place down the road'),
+			('oddboi@AOL.com', 'Cam', 'Lloyd', '273823847827', 'On the highway somewhere');
 
-INSERT INTO orderHistory(partNum, partDesc, price, email, dateOr, status)
+INSERT INTO orderHistory(partNum, oQuantity, partDesc, price, email, dateOr, status)
     VALUES
-            (1, 'windshield w/ polymer ',178.76,'arojo@yahoo.com', '1998-03-21-11-12-56', 'authorized');
+            (1, 1, 'windshield w/ polymer ',178.76,'arojo@yahoo.com', '1998-03-21-11-12-56', 'authorized'),
+			(2, 4, 'wiper blade pair', 93.48, 'rdmperson@hotmail.com', '2012-04-12-04-23-47', 'shipped'),
+			(3, 263, 'solenoid', 9620.54, 'oddboi@AOL.com', '2001-11-24-10-54-14', 'shipped');
