@@ -81,6 +81,6 @@ INSERT INTO pInfo(email,fName,lName,creditCard,addr)
     VALUES
             ('arojo@yahoo.com','Alexander', 'Rojas', '123456789123', '550 N Annie Glidden Rd, Dekalb, IL, USA');
 
-INSERT INTO orderHistory(partNum, partDesc, price, email)
+INSERT INTO orderHistory(partNum, partDesc, price, email, dateOr, status)
     VALUES
             (1, 'windshield w/ polymer ',178.76,'arojo@yahoo.com', 1998-03-21-11-12-56, authorized);
