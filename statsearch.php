@@ -9,7 +9,6 @@
 	}
 switch ($_POST['status']) {
 	case "shipped":
-		echo "min";
 		$prepared = $pdo->query('SELECT orderID, inventory.partNum, partDesc, price, pInfo.email, dateOr, status FROM orderHistory
 			INNER JOIN inventory ON orderHistory.partNum = inventory.partNum
 			INNER JOIN pInfo ON orderHistory.email = pInfo.email
