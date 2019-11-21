@@ -10,11 +10,6 @@ CREATE TABLE inventory(
      quantity int
 );
 
-CREATE TABLE handling(
-    fee float(4,2) primary key,
-    feetype int
-);
-
 CREATE TABLE weight(
     minW float(8,2) primary key,
     maxW float(8,2),
@@ -54,14 +49,6 @@ INSERT INTO inventory(partNum, quantity)
             (8, 9),
             (9, 67),
             (10, 89);
-
-INSERT INTO handling(fee, feetype)
-    VALUES
-            (10.00, 1),
-            (20.00, 2),
-            (30.00, 3),
-            (40.00, 4),
-            (50.00, 5);
 
 INSERT INTO weight(minW, maxW, cost)
     VALUES
