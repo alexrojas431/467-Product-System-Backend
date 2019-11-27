@@ -11,16 +11,16 @@ switch ($_POST['WType']) {
 		echo "min";
 		$weightEdit = "UPDATE weight SET cost=? WHERE minW=?;";
 		$weightResult = $pdo->prepare($weightEdit);
-		$weightexec = $weightResult->execute(array($_POST['cost'],$_POST['wValue']));
+		$weightResult->execute(array($_POST['cost'], $_POST['wValue']));
 		break;
 	case "maxW":
 		echo "max";
-		$weightEdit = "UPDATE weight SET cost=? WHERE maxW=?;";
+		$weightEdit = "UPDATE weight SET cost =? WHERE maxW=?;";
 		$weightResult = $pdo->prepare($weightEdit);
-		$weightexec = $weightResult->execute(array($_POST['cost'],$_POST['wValue']));
+		$weightResult->execute(array($_POST['cost'], $_POST['wValue']));
 		break;
 	default:
 		echo "somehing went wrong";
 }
-//header("Refresh:0; url=/~z1853137/467admin.php");
+header("Refresh:1; url=/~z1853137/467admin.php");
 ?>
