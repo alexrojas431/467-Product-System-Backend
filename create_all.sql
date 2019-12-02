@@ -10,11 +10,6 @@ CREATE TABLE inventory(
      quantity int
 );
 
-CREATE TABLE handling(
-    fee float(4,2) primary key,
-    feetype int
-);
-
 CREATE TABLE weight(
     minW float(8,2) primary key,
     maxW float(8,2),
@@ -55,28 +50,20 @@ INSERT INTO inventory(partNum, quantity)
             (9, 67),
             (10, 89);
 
-INSERT INTO handling(fee, feetype)
-    VALUES
-            (10.00, 1),
-            (20.00, 2),
-            (30.00, 3),
-            (40.00, 4),
-            (50.00, 5);
-
 INSERT INTO weight(minW, maxW, cost)
     VALUES
-            (0.00, 0.55, 0.00),
-            (0.56, 1.00, 1.00),
-            (1.01, 1.55, 2.00),
-            (1.56, 2.00, 3.00),
-            (2.01, 2.55, 4.00),
-            (2.56, 3.00, 5.00),
-            (3.01, 3.55, 6.00),
-            (3.56, 4.00, 7.00),
-            (12.01, 12.55, 14.00),
-            (12.56, 13.00, 15.00),
-            (99.01, 99.55, 100.00),
-            (99.56, 100.00, 110.00);
+            (0.00, 1.00, 3.00),
+            (2.00, 3.00, 4.00),
+            (3.00, 4.00, 5.00),
+            (4.00, 5.00, 6.00),
+            (5.00, 6.00, 7.00),
+            (7.00, 8.00, 8.00),
+            (8.00, 9.00, 9.00),
+            (10.00, 12.00, 10.00),
+            (15.00, 20.00, 14.00),
+            (20.00, 40.00, 35.00),
+            (40.00, 80.00, 100.00),
+            (80.00, 500.00, 150.00);
 
 INSERT INTO pInfo(email,fName,lName,creditCard,addr)
     VALUES
